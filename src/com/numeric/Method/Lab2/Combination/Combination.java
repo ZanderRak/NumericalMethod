@@ -11,24 +11,25 @@ public class Combination {
 
     public double solution(double a, double b, double eps) {
         double x0 = a;
-        double x11;
-        double x12;
+        double tmpXfirst;
+        double tmpXsecond;
         double tmpEps;
         if (function(a) * function(b) > 0) {
+           // если нет решение
             return Double.POSITIVE_INFINITY;
         } else {
-            x11 = x0 - function(x0) / dxFunction(x0);
-            x12 = a - (((b - a) * function(a)) / (function(b) - function(a)));
+            tmpXfirst = x0 - function(x0) / dxFunction(x0);
+            tmpXsecond = a - (((b - a) * function(a)) / (function(b) - function(a)));
         do {
-                a = x11;
-                b = x12;
-                x11 = a - function(a) / dxFunction(a);
-                x12 = a - ((b - a) * function(a) / function(b) - function(a));
-                tmpEps = (x11 + x12) / 2;
+                a = tmpXfirst;
+                b = tmpXsecond;
+                tmpXfirst = a - function(a) / dxFunction(a);
+                tmpXsecond = a - ((b - a) * function(a) / function(b) - function(a));
+                tmpEps = (tmpXfirst + tmpXsecond) / 2;
             }
-            while (Math.abs(tmpEps - x11) > eps);
+            while (Math.abs(tmpEps - tmpXfirst) > eps);
         }
-        return x11;
+        return tmpXsecond;
     }
 }
 

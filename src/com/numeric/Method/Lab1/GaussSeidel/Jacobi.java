@@ -4,7 +4,6 @@ public class Jacobi {
     public double[] solution(double[][] matrix, double[] freeColumn, double[] startApprox, double EPS) {
         double[] tempX = new double[freeColumn.length];
         double norm;
-
         do {
             for (int i = 0; i < freeColumn.length; i++) {
                 tempX[i] = freeColumn[i];

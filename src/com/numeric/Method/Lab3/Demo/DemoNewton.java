@@ -1,14 +1,12 @@
 package com.numeric.Method.Lab3.Demo;
 
-import com.numeric.Method.Lab3.InterpolationPolynomNuton.InterpolationPolynomNuton;
+import com.numeric.Method.Lab3.InterpolationPolynomialNewton.InterpolationPolynomialNewton;
 
 import java.util.Scanner;
 
-public class DemoNuton {
-
-
+public class DemoNewton {
     public static void main(String[] arg){
-        InterpolationPolynomNuton ipn = new InterpolationPolynomNuton();
+        InterpolationPolynomialNewton ipn = new InterpolationPolynomialNewton();
         Scanner sc = new Scanner(System.in);
         double[] xPoints = new double[5];
         double[] yPoints = new double[5];
@@ -22,8 +20,6 @@ public class DemoNuton {
         }
         System.out.print("Введите контрольный X для проверки полинома: x=");
         double x = sc.nextDouble();
-        System.out.print(ipn.nuton(xPoints, yPoints, x));
-
-
+        System.out.print(ipn.newton(xPoints, yPoints, x));
     }
 }
