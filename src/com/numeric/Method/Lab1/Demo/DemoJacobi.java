@@ -1,6 +1,6 @@
 package com.numeric.Method.Lab1.Demo;
 
-import com.numeric.Method.Lab1.GaussSeidel.Jacobi;
+import com.numeric.Method.Lab1.Jacobi.Jacobi;
 
 import java.util.Scanner;
 

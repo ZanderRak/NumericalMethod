@@ -2,7 +2,7 @@ package com.numeric.Method.Lab2.Combination;
 
 public class Combination {
     private double function(double x) {
-        return Math.pow(x, 3) + Math.pow(x, 2) + 3;
+        return Math.exp(-x)-Math.log10(x);
     }
 
     private double dxFunction(double x) {

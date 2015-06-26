@@ -1,4 +1,4 @@
-package com.numeric.Method.Lab1.GaussSeidel;
+package com.numeric.Method.Lab1.Jacobi;
 
 public class Jacobi {
     public double[] solution(double[][] matrix, double[] freeColumn, double[] startApprox, double EPS) {
